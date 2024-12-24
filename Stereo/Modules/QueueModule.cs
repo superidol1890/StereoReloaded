@@ -1,4 +1,6 @@
 using System;
+using System.Diagnostics;
+using System.IO;
 using Reactor.Utilities;
 using Reactor.Utilities.ImGui;
 using UnityEngine;
@@ -25,6 +27,17 @@ public class QueueModule : BaseModule
         }
 
         const float scrollViewHeight = 250f;
+
+        var buttonStyle = new GUIStyle(GUI.skin.button)
+        {
+            padding = new RectOffset
+            {
+                top = 10,
+                bottom = 10,
+                left = 10,
+                right = 10
+            }
+        };
 
         var numberLabelStyle = new GUIStyle(GUI.skin.label)
         {
@@ -87,22 +100,17 @@ public class QueueModule : BaseModule
 
         GUILayout.Space(5f);
 
-        var autoScrollStatusText = _autoScroll ? "ON" : "OFF";
+        GUILayout.BeginHorizontal();
+        {
+            var autoScrollStatusText = _autoScroll ? "ON" : "OFF";
+            _autoScroll = GUILayout.Toggle(_autoScroll, $"Auto Scroll: {autoScrollStatusText}", buttonStyle);
 
-        _autoScroll = GUILayout.Toggle(
-            _autoScroll,
-            $"Auto Scroll: {autoScrollStatusText}",
-            new GUIStyle(GUI.skin.button)
+            if (GUILayout.Button("Open Songs Folder", buttonStyle))
             {
-                padding = new RectOffset
-                {
-                    top = 10,
-                    bottom = 10,
-                    left = 10,
-                    right = 10
-                }
-            },
-            GUILayout.ExpandWidth(true));
+                Process.Start("explorer.exe", Constants.Paths.Songs + Path.DirectorySeparatorChar);
+            }
+        }
+        GUILayout.EndHorizontal();
 
         GUILayout.Space(5f);
 
