@@ -7,7 +7,7 @@ Among Us custom lobby music mod.
 ## Download
 
 1. Navigate to the latest available version of the mod for your version of the game in
-[releases](https://github.com/DaemonBeast/Stereo/releases).
+[releases](https://github.com/superidol1890/StereoReloaded/releases).
 2. Download the specified dependencies, unzipping any zipped files.
 3. Download the mod.
 4. Put all the downloaded files in your `AmongUs/BepInEx/plugins` folder.
