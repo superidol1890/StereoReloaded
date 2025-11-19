@@ -11,7 +11,7 @@
 
         <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <RepositoryUrl>https://github.com/DaemonBeast/Stereo</RepositoryUrl>
+        <RepositoryUrl>https://github.com/superidol1890/StereoReloaded</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
     </PropertyGroup>
 
@@ -22,9 +22,9 @@
         <PackageReference Include="Mitochondria.Resources" Version="0.14.0" />
         <PackageReference Include="Mitochondria.Resources.FFmpeg" Version="0.14.0" />
         <PackageReference Include="Mitochondria.Resources.Primitives" Version="0.14.0" />
-        <PackageReference Include="Reactor" Version="2.3.1" />
+        <PackageReference Include="Reactor" Version="2.5.0-ci.371" />
 
-        <PackageReference Include="AmongUs.GameLibs.Steam" Version="2025.10.14" PrivateAssets="all" />
+        <PackageReference Include="AmongUs.GameLibs.Steam" Version="2025.11.18" PrivateAssets="all" />
 
         <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.697" Private="false" ExcludeAssets="runtime;native" />
         <PackageReference Include="BepInEx.AutoPlugin" Version="1.1.0" PrivateAssets="all" />
