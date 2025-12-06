@@ -1,4 +1,4 @@
-**Note: Stereo works with v2025.11.18(v17.1.0).**
+# Note: Stereo works with v2025.11.18(v17.1.0).
 
 # Stereo
 
