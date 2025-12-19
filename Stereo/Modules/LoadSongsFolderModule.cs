@@ -39,7 +39,6 @@ public class LoadSongsFolderModule(SettingsState settingsState) : BaseModule
                     }
                     catch
                     {
-                        // ignored
                     }
                 }
             },

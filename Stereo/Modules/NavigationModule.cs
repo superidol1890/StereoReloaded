@@ -40,8 +40,6 @@ public class NavigationModule : BaseModule
                     ? GUILayout.Button(_previousTextureHandle.Resource, GUILayout.Height(collapsedButtonHeight))
                     : GUILayout.Button(_previousTextureHandle.Resource))
             {
-                // Avoid starting lots of processes when flicking through the queue.
-                // I don't really want to do this, but it's either this or process spam.
                 Coroutines.Start(lobbyMusicPlayer.PlayNextInQueue(-1, 1f));
             }
 

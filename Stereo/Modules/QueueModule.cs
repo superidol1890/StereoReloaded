@@ -81,7 +81,6 @@ public class QueueModule : BaseModule
             }
         };
 
-        // This is all very delicate and prone to breaking.
         var numberLabelWidth = numberLabelStyle.CalcSize(new GUIContent("00")).x;
 
         var songHeight = songButtonStyle.CalcHeight(new GUIContent("Thick Of It"), 400f) +

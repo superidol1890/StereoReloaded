@@ -106,7 +106,6 @@ public class LobbyMusicPlayerBehaviour : MonoBehaviour
 
     private void OnDestroy()
     {
-        // I think disposing like this is fine. Feel free to correct me.
         _initializationCancellationTokenSource?.Token.Register(() => _initializationCancellationTokenSource.Dispose());
         _initializationCancellationTokenSource?.Cancel();
 

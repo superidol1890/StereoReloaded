@@ -23,7 +23,6 @@ internal static class MusicPatches
     {
         public static void Postfix(LobbyBehaviour._DelayPlayDropshipAmbience_d__15 __instance)
         {
-            // 1 and -1 consistently represent the first and last states, thus mimicking prefixes and postfixes
             switch (__instance.__1__state)
             {
                 case 1:

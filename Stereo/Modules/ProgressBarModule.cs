@@ -36,7 +36,6 @@ public class ProgressBarModule(CollapsedState<TitleModule> collapsedState) : Bas
 
                 if (Math.Abs(newPlaybackTime - lobbyMusicPlayer.PlaybackTime) > 0.1f)
                 {
-                    // TODO: Unity complaining about seeking out of bounds?
                     lobbyMusicPlayer.PlaybackTime = Math.Clamp(newPlaybackTime, 0, lobbyMusicPlayer.Duration);
                 }
             }

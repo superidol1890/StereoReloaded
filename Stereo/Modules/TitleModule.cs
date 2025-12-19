@@ -82,12 +82,11 @@ public class TitleModule(CollapsedState<TitleModule> collapsedState) : BaseModul
 
         var titleText = GetTitleText(lobbyMusicPlayer);
 
-        var queuePositionText = false /*lobbyMusicPlayer.QueuedSongs.Count != 0*/
+        var queuePositionText = false
             ? $" [{lobbyMusicPlayer.QueuePosition + 1}/{lobbyMusicPlayer.QueuedSongs.Count}]"
             : "";
 
         const int maxFontSize = 18;
-        // TODO: `400f` should not be hardcoded.
         const float titleWidth = 400f;
 
         var tempTitleStyle = new GUIStyle(GUI.skin.label)

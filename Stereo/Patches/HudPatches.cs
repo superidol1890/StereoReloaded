@@ -36,7 +36,6 @@ internal static class HudPatches
             _musicButtonTransform = Object.Instantiate(settingsButtonTransform, settingsButtonTransform.parent);
             _musicButtonTransform.name = "MusicButton";
 
-            // TODO: Add controller support?
             _musicButtonTransform.GetComponent<ControllerButtonBehavior>().Destroy();
 
             SetMusicButtonSprite("Inactive", _inactiveSpriteHandle.Resource);

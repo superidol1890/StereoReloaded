@@ -136,8 +136,6 @@ public class SettingsState : BaseModule
 
         if (VisibilityToggleShortcut.Value.KeyCodes.IsEmpty)
         {
-            // If the shortcut to show the music player is empty for whatever reason, force the HUD button to be visible
-            // to avoid the music player being stuck closed.
             ShowHudButton.Value = true;
         }
 

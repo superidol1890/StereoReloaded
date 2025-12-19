@@ -161,7 +161,6 @@ public class LobbyMusicPlayer
         var previousLoadSongCancellationTokenSource = _loadSongCancellationTokenSource;
         _loadSongCancellationTokenSource = cancellationTokenSource;
 
-        // Force code below to run on main thread.
         yield return null;
 
         SongLoading?.Invoke(songInfo);
@@ -188,7 +187,6 @@ public class LobbyMusicPlayer
 
             if (SongLoadResult is { State: SongLoadState.Loading } result && result.Song == songInfo.Metadata)
             {
-                // Only change the result if it hasn't already been changed.
                 SongLoadResult = new SongLoadResult(SongLoadState.FailedToLoad, songInfo.Metadata);
             }
 

@@ -108,43 +108,6 @@ public class SettingsModule(SettingsState settingsState) : BaseModule
                 }
                 GUILayout.EndVertical();
 
-                /*{
-                    var disabled = settingsState.VisibilityToggleShortcut.Value.KeyCodes.IsEmpty &&
-                                   settingsState.ShowHudButton.Value;
-
-                    GUI.enabled = !disabled;
-
-                    var oldShowHudButton = settingsState.ShowHudButton.Value;
-
-                    settingsState.ShowHudButton.Value = GUILayout.Toggle(
-                        oldShowHudButton,
-                        " Show HUD button");
-
-                    if (settingsState.ShowHudButton.Value != oldShowHudButton &&
-                        HudUtils.TryFindHudButton(out var hudButton))
-                    {
-                        hudButton.SetActive(settingsState.ShowHudButton.Value);
-                    }
-
-                    GUI.enabled = true;
-
-                    if (disabled)
-                    {
-                        GUILayout.Label(
-                            "A keyboard shortcut must be set before the HUD button can be hidden.",
-                            new GUIStyle(GUI.skin.label)
-                            {
-                                normal = new GUIStyleState
-                                {
-                                    textColor = Color.gray
-                                },
-                                wordWrap = true
-                            });
-
-                        GUILayout.Space(10f);
-                    }
-                }*/
-
                 GUIUtils.KeyboardShortcut(
                     ref _visibilityToggleShortcutCaptureKeyboard,
                     ref _tempKeyboardShortcut,

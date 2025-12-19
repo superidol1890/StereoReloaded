@@ -41,23 +41,18 @@ public partial class StereoPlugin : BasePlugin
 
         ReactorCredits.Register<StereoPlugin>(ReactorCredits.AlwaysShow);
 
-        // This system has some pretty major flaws, but it just about works.
         Modules
-            // State
             .Register<CollapsedState<TitleModule>>()
             .Register<CollapsedState<QueueModule>>()
             .Register<SettingsState>()
             .Register<WindowState>()
-            // Miscellaneous
             .Register<LoadSongsFolderModule>()
-            // Music Player Window
             .Register<TitleModule>()
             .Register<NavigationModule>()
             .Register<ProgressBarModule>()
             .Register<VolumeModule>()
             .Register<ToolbarModule>()
             .Register<SettingsModule>()
-            // Queue Window
             .Register<QueueModule>();
 
         Harmony.PatchAll();
