@@ -22,7 +22,7 @@
         <PackageReference Include="Mitochondria.Resources" Version="0.14.0" />
         <PackageReference Include="Mitochondria.Resources.FFmpeg" Version="0.14.0" />
         <PackageReference Include="Mitochondria.Resources.Primitives" Version="0.14.0" />
-        <PackageReference Include="Reactor" Version="2.5.0" />
+        <PackageReference Include="Reactor" Version="2.3.1" />
 
         <PackageReference Include="AmongUs.GameLibs.Steam" Version="2025.11.18" PrivateAssets="all" />
 
@@ -43,3 +43,4 @@
         <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(AmongUs)/BepInEx/plugins/" UseSymboliclinksIfPossible="true" />
     </Target>
 </Project>
+
